@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/*"
+  to = "https://your-backend-api.com:8000/:splat"
+  status = 200
