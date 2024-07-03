@@ -1,6 +1,6 @@
 # MERN Stack Todo Application
 
-Hello , I'm Deepak Kumar. In this repository I have build a 'MERN Stack TODO App'. Using 'Node.js, Express.js, MongoDB, React.js & CSS'.
+Hello , I'm Deepak Kumar. In this repository I have build a 'MERN Stack TODO App'. It is used to organize the tasks and works that needs to be completed.
 
 ### Development with MERN Stack Todo Application
 
