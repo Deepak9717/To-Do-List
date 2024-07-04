@@ -15,7 +15,7 @@ export function ShowTodo() {
 
     useEffect(() => {
         axios
-            .get("http://localhost:8000/api/todo")
+            .get("https://deepak-todo-app.netlify.app/api/todo")
             .then((res) => {
                 setTodo(res.data);
                 setTimeout(() => {
@@ -57,7 +57,7 @@ export function ShowTodo() {
 
     function handleDelete(e) {
         axios
-            .delete(`http://localhost:8000/api/todo/${e.target.name}`)
+            .delete(`https://deepak-todo-app.netlify.app/api/todo/${e.target.name}`)
             .then((res) => {
                 if(res.status === 200)
                     handleTodo(e);
