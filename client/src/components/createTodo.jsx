@@ -16,7 +16,7 @@ export function CreateTodo({handleReload, handleOpenCreate}) {
         e.preventDefault();
 
         axios
-            .post("https://deepak-todo-app.netlify.app/api/todo", data)
+            .post(`${process.env.REACT_API_URL}/api/todo`, data)
             .then((res) => {
                 setData({ title: "", description: "" });
                 console.log(res.data.message);
