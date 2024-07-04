@@ -1,5 +1,4 @@
 import { ShowTodo } from "./components/showTodo";
-import "dotenv";
 
 import './App.css';
 
