@@ -15,7 +15,7 @@ export function ShowTodo() {
 
     useEffect(() => {
         axios
-            .get(`${import.meta.env.REACT_API_URL}api/todo`)
+            .get(`${import.meta.env.REACT_API_URL}/api/todo`)
             .then((res) => {
                 setTodo(res.data);
                 setTimeout(() => {
