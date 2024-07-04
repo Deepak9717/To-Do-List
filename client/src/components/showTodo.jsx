@@ -15,7 +15,7 @@ export function ShowTodo() {
 
     useEffect(() => {
         axios
-            .get(`${process.env.REACT_API_URL}/api/todo`)
+            .get(`${import.meta.env.REACT_API_URL}/api/todo`)
             .then((res) => {
                 setTodo(res.data);
                 setTimeout(() => {
@@ -57,7 +57,7 @@ export function ShowTodo() {
 
     function handleDelete(e) {
         axios
-            .delete(`${process.env.REACT_API_URL}/api/todo/${e.target.name}`)
+            .delete(`${import.meta.env.REACT_API_URL}/api/todo/${e.target.name}`)
             .then((res) => {
                 if(res.status === 200)
                     handleTodo(e);

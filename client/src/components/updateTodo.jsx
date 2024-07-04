@@ -14,7 +14,7 @@ export function UpdateTodo({ _id, todo, handleClose, handleReload}) {
         e.preventDefault();
 
         axios
-            .put(`${process.env.REACT_API_URL}/api/todo/${_id}`, data)
+            .put(`${import.meta.env.REACT_API_URL}/api/todo/${_id}`, data)
             .then((res) => {
                 setData({ title: "", description: "" });
                 console.log(res.data.message);
