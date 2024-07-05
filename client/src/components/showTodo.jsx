@@ -21,13 +21,13 @@ export function ShowTodo() {
 
                 setTimeout(() => {
                     setLoading(false);
-                }, 250);
+                }, 50);
             })
             .catch((err) => {
                 console.log(err.message);
                 setTimeout(() => {
                     setLoading(false);
-                }, 250);
+                }, 50);
             });
     }, [reload]);
 
