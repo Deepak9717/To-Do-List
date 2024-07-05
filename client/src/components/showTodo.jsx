@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import axios from 'axios';
 import { UpdateTodo } from "./updateTodo";
 import { CreateTodo } from "./createTodo";
@@ -18,15 +18,16 @@ export function ShowTodo() {
             .get(`${import.meta.env.REACT_API_URL}/api/todo`)
             .then((res) => {
                 setTodo(res.data);
+
                 setTimeout(() => {
                     setLoading(false);
-                }, 500);
+                }, 250);
             })
             .catch((err) => {
                 console.log(err.message);
                 setTimeout(() => {
                     setLoading(false);
-                }, 500);
+                }, 250);
             });
     }, [reload]);
 
@@ -40,7 +41,6 @@ export function ShowTodo() {
     function handleOpenCreate() {
         setOpenCreate(!openCreate);
     }
-
     function handleTodo(e) {
         const itemId = e.target.name;
         const itemCheck = todo.find((item) => item._id === itemId);
@@ -51,7 +51,7 @@ export function ShowTodo() {
             });
         }
     }
-    function handleReload() {
+    function handleReload(){
         setReload(!reload);
     }
 
@@ -97,7 +97,7 @@ export function ShowTodo() {
                 ) : (
                     <section>
                         <div style={{ display: "flex",gap: "0.5rem" }}>
-                            <img src="/notepad-icon.png" alt="" width="40px" />
+                            <img src="/notepad-icon.png" alt="" width="40px" loading="eager"/>
                             <h1>Your To Do</h1>
                         </div>
                         <ul>
@@ -129,6 +129,5 @@ export function ShowTodo() {
             ) : ("")
             }
         </>
-
     );
 }

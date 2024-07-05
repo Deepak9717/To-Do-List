@@ -20,6 +20,7 @@ export function CreateTodo({handleReload, handleOpenCreate}) {
             .then((res) => {
                 setData({ title: "", description: "" });
                 console.log(res.data.message);
+                handleReload();
             })
             .catch((err) => {
                 console.log("Error couldn't create TO-DO");
@@ -31,7 +32,6 @@ export function CreateTodo({handleReload, handleOpenCreate}) {
         <form className="modal" onSubmit={(e)=>{
             handleSubmit(e);
             handleOpenCreate();
-            handleReload();
         }} noValidate>
             <p onClick={handleOpenCreate} className="close">&times;</p>
             <h2>Create Your To-Do</h2>

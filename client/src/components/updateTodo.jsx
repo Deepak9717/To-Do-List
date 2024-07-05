@@ -18,6 +18,7 @@ export function UpdateTodo({ _id, todo, handleClose, handleReload}) {
             .then((res) => {
                 setData({ title: "", description: "" });
                 console.log(res.data.message);
+                handleReload();
             })
             .catch((err) => {
                 console.log("Failed to update todo");
@@ -30,7 +31,7 @@ export function UpdateTodo({ _id, todo, handleClose, handleReload}) {
             onSubmit={(e) => {
                 handleSubmit(e);
                 handleClose();
-                handleReload();
+                
             }}
         >
             <p onClick={handleClose} className="close">&times;</p>
