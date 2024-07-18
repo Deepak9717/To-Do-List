@@ -272,12 +272,12 @@ ul li:hover {
         padding: 1.25rem;
     }
     .create-btn-section{
-        width: 3rem;
+        width: 3.5rem;
         min-height: 3rem;
         padding: 0;
         position: fixed;
         right: -20px;
-        bottom: 10px;
+        bottom: 18px;
         z-index: 1;
         background: transparent;
         border: none;
